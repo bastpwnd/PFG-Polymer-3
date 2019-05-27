@@ -12,18 +12,52 @@ class Formulario extends PolymerElement {
           display: block;
         }
       </style>
+	  <style include="form-styles">
+        :host {
+          display: block;
+		  padding: 10px;
+		  height: 1000px;
+        }
+      </style>
       <h1>Componente formulario</h1>
-	  <form>
-		  First name:<br>
-		  <input type="text" name="firstname"><br>
-		  Last name:<br>
-		  <input type="text" name="lastname"><br>
-		  Telephone:<br>
-		  <input type="tel" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><span>Format: 123-45-678</span><br>
-		  Fecha Nacimiento:<br>
-		  <input type="date" name="bday" max="1979-12-31"><br>
+	  <div class="container">  
+	  <form id="contact" action="" method="post">
+		<h3>Datos del contacto</h3>
+		<h4>Rellena toda la informacion para que te podamos ayudar!</h4>
+		<fieldset>
+		  <input placeholder="Nombre Contacto" type="text" tabindex="1" required autofocus>
+		</fieldset>
+		<fieldset>
+		  <input placeholder="Email" type="email" tabindex="2" required>
+		</fieldset>
+		<fieldset>
+		  <input placeholder="Numero de Telefono" type="tel" tabindex="3" required>
+		</fieldset>
+		<fieldset>
+		  <input placeholder="Web Preferida" type="url" tabindex="4" required>
+		</fieldset>
+		<fieldset>
+			<input type="radio" name="boton1"> Hombre
+			<input type="radio" name="boton1"> Mujer
+		</fieldset>
+		<fieldset>
+			Fecha Nacimiento: <input type="date" name="fecha" size="20">
+		</fieldset>
+		<fieldset>
+			Indique su nivel de satisfacción(de 1 a 10):
+			<input type="range" name="rango" min="1" max="10" step="1">
+		</fieldset>
 		
-	 </form>
+		<fieldset>
+		  <textarea placeholder="Comentarios adicionales...." tabindex="5" required></textarea>
+		</fieldset>
+		<fieldset>
+		  <button name="enviar" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+		</fieldset>
+	  </form>
+	 
+	  
+	</div>
     `;
   }
   static get properties() {
