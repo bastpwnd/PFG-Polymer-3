@@ -9,11 +9,10 @@
  */
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import './myStyleUser.js';
-import './myStyleUser2.js';
-import './shared-styles.js';
-import './form.js';
-import './lista-contactos.js';
+import '../styles/myStyleUser.js';
+import '../styles/myStyleUser2.js';
+import '../styles/shared-styles.js';
+import '../WebComponentsNews/lista-contactos.js';
 
 class MyView1 extends PolymerElement {
   static get template() {

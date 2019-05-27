@@ -9,8 +9,8 @@
  */
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import './shared-styles.js';
-import './hola-mundo.js';
+import '../styles/shared-styles.js';
+import '../WebComponentsNews/mensaje-personalizado.js';
 
 class MyView4 extends PolymerElement {
   static get template() {

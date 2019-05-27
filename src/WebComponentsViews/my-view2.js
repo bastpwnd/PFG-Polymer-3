@@ -9,12 +9,12 @@
  */
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import './shared-styles.js';
-import './menu-catalogo.js';
+import '../styles/shared-styles.js';
+import '../WebComponentsNews/form.js';
+import '../styles/myStyleForm.js';
 
 
-
-class MyView3 extends PolymerElement {
+class MyView2 extends PolymerElement {
   static get template() {
     return html`
       <style include="shared-styles">
@@ -23,22 +23,14 @@ class MyView3 extends PolymerElement {
 
           padding: 10px;
         }
-		body {
-	  background: @lightBG;
-	  color: @darkGrey;
-	  font-family: 'Source Sans Pro', sans-serif;
-	  text-rendering: optimizeLegibility;
-	}
       </style>
-	  <div class="card">
-        <div class="circle">3</div>
-		<catalogo-ivan></catalogo-ivan>
+
+      <div class="card">
+        <div class="circle">2</div>
+		<formulario-ivan></formulario-ivan>
       </div>
-      
-      
-	  
     `;
   }
 }
 
-window.customElements.define('my-view3', MyView3);
+window.customElements.define('my-view2', MyView2);
