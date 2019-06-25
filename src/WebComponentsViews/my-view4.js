@@ -24,7 +24,7 @@ class MyView4 extends PolymerElement {
       </style>
 
       <div class="card">
-        <div class="circle">1</div>
+        <div class="circle">4</div>
         <mensaje-personalizado prop1="primer componente por Ivan"></mensaje-personalizado>
       </div>
     `;

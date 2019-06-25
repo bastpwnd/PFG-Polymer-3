@@ -84,10 +84,11 @@ class MyApp extends PolymerElement {
         <app-drawer id="drawer" slot="drawer" swipe-open="[[narrow]]">
           <app-toolbar>Menu</app-toolbar>
           <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-            <a name="view1" href="[[rootPath]]view4">Primer Componente</a>
+            <a name="view1" href="[[rootPath]]view1">Primer Componente</a>
             <a name="view2" href="[[rootPath]]view2">Segundo Componente</a>
             <a name="view3" href="[[rootPath]]view3">Tercer Componente</a>
-			<a name="view4" href="[[rootPath]]view1">Cuarto Componente</a>
+			<a name="view4" href="[[rootPath]]view4">Cuarto Componente</a>
+			<a name="view5" href="[[rootPath]]view5">Componente Externo </a>
           </iron-selector>
         </app-drawer>
 
@@ -97,7 +98,7 @@ class MyApp extends PolymerElement {
           <app-header slot="header" condenses="" reveals="" effects="waterfall">
             <app-toolbar>
               <paper-icon-button icon="my-icons:menu" drawer-toggle=""></paper-icon-button>
-              <div main-title="">My App</div>
+              <div main-title="">PFG-Iván Martín Alonso    WebComponents</div>
             </app-toolbar>
           </app-header>
 
@@ -106,6 +107,7 @@ class MyApp extends PolymerElement {
             <my-view2 name="view2"></my-view2>
             <my-view3 name="view3"></my-view3>
 			<my-view4 name="view4"></my-view4>
+			<my-view5 name="view5"></my-view5>
             <my-view404 name="view404"></my-view404>
           </iron-pages>
         </app-header-layout>
@@ -138,7 +140,7 @@ class MyApp extends PolymerElement {
      // Show 'view1' in that case. And if the page doesn't exist, show 'view404'.
     if (!page) {
       this.page = 'view1';
-    } else if (['view1', 'view2', 'view3','view4'].indexOf(page) !== -1) {
+    } else if (['view1', 'view2', 'view3','view4','view5'].indexOf(page) !== -1) {
       this.page = page;
     } else {
       this.page = 'view404';
@@ -165,11 +167,14 @@ class MyApp extends PolymerElement {
       case 'view3':
         import('./WebComponentsViews/my-view3.js');
         break;
-      case 'view404':
-        import('./WebComponentsViews/my-view404.js');
-        break;
 	  case 'view4':
         import('./WebComponentsViews/my-view4.js');
+        break;
+	  case 'view5':
+        import('./WebComponentsViews/my-view5.js');
+        break;
+	  case 'view404':
+        import('./WebComponentsViews/my-view404.js');
         break;
     }
   }

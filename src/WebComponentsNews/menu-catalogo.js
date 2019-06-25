@@ -12,7 +12,7 @@ class Catalogo extends PolymerElement {
           display: block;
 
           padding: 10px;
-		  background: #dce1df;
+		  background: #ffffff;
 		  color: #dce1df;
 		  
         }
@@ -20,6 +20,8 @@ class Catalogo extends PolymerElement {
 		  margin: 80px auto;
 		  max-width: 960px;
 		  text-align: center;
+		  background: #ffffff;
+		  
 		}
 		img {
 			max-width: 850px;

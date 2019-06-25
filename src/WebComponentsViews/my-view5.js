@@ -9,12 +9,10 @@
  */
 
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import '../styles/myStyleUser.js';
-import '../styles/myStyleUser2.js';
 import '../styles/shared-styles.js';
-import '../WebComponentsNews/lista-contactos.js';
+import '../WebComponentsNews/mensaje-personalizado.js';
 
-class MyView1 extends PolymerElement {
+class MyView5 extends PolymerElement {
   static get template() {
     return html`
       <style include="shared-styles">
@@ -27,11 +25,11 @@ class MyView1 extends PolymerElement {
 
       <div class="card">
         <div class="circle">1</div>
-		<h3>Componente Listado de usuarios</h3>
-		<lista-usuarios></lista-usuarios>
+		<h2>Esto es un componente externooooo</h2>
+        <mensaje-personalizado prop1="primer componente por Ivan"></mensaje-personalizado>
       </div>
     `;
   }
 }
 
-window.customElements.define('my-view1', MyView1);
+window.customElements.define('my-view5', MyView5);
